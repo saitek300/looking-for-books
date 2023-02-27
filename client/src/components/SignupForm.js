@@ -30,7 +30,7 @@ const SignupForm = () => {
     }
 
     try {
-      const {data} = signup({
+      const {data} = await signup({
         variables: {...userFormData}
       });
       Auth.login(data.addUser.token);
